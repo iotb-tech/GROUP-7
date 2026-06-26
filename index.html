@@ -12,6 +12,7 @@
     <p>Find Favorite movies!</p>
   </header>
   <main>
+    <!-- Search -->
     <form action="" method="GET" id="searchForm">
       <label for="searchInput">Enter a movie title:</label>
       <input type="text" id="searchInput" name="movie" placeholder="Search for a movie..." required>
@@ -21,13 +22,23 @@
 
     <div id="status"></div> 
     
+    <!-- Favorite Movies -->
     <h2>Favorite Movies</h2>
     <div id="favoriteContainer"></div>
- 
+    
+    <!-- Movie Results -->
     <h2>Movie Details</h2>
     <div id="movieContainer"></div>
 
     <div id="paginationContainer"></div>
+
+    <!-- Modal -->
+    <div id="movieModal" class="modal" aria-hidden="true">
+      <div id="modalContent" class="modal-content" role="dialog" aria-modal="true">
+        <button id="closeModal" aria-label="Close modal">Close</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
 
   </main>
 
@@ -35,6 +46,10 @@
     <p>&copy; 2026 Movie Finder Group 7 IOTBTECH</p>
   </footer>
 
- <script src="script.js"></script>
+ <script src="api.js"></script>
+ <script src="ui.js"></script>
+ <script src="modal.js"></script>
+ <script src="favorites.js"></script>
+ <script src="script.js"></script> 
 </body>
-</html>  
+</html>   
