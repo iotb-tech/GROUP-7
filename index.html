@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>movie finder</title>
+</head>
+<body>
+  <header>
+    <h1>Movie Finder</h1>
+    <p>Find Favorite movies!</p>
+  </header>
+  <main>
+    <form action="" method="GET" id="searchForm">
+      <label for="searchInput">Enter a movie title:</label>
+      <input type="text" id="searchInput" name="movie" placeholder="Search for a movie..." required>
+
+      <button type="submit" id="searchButton">Search</button> 
+    </form>
+
+    <div id="status"></div> 
+    
+    <h2>Favorite Movies</h2>
+    <div id="favoriteContainer"></div>
+ 
+    <h2>Movie Details</h2>
+    <div id="movieContainer"></div>
+
+    <div id="paginationContainer"></div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Movie Finder Group 7 IOTBTECH</p>
+  </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>  
