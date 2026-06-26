@@ -17,9 +17,9 @@ async function fetchMovies(title, page = 1) {
       statusDiv.textContent = data.Error;
       return;
     }
-    currrentMovie = data.Search;
-    //renderMovies(data.Search);
-    ///renderPagination(data.totalResults);
+    currentMovies = data.Search;
+    movieDisplay(data.Search);;
+    //renderPagination(data.totalResults);
     statusDiv.textContent = '';
     return data;
   } catch (error) {
