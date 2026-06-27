@@ -15,7 +15,15 @@ let currentTitle = '';
 let currentResults = [];
 let debounceTimer;
 
-//FAVORITES
+// SEARCH FORM
+searchForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const title = searchInput.value.trim();
+  if (!title) return;
+  fetchMovies(title);
+});
+
+// FAVORITES
 let favorites = [] //localstorage 
 const savedFavorites = localStorage.getItem('favorites');
 if (savedFavorites) {

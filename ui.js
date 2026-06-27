@@ -1,7 +1,6 @@
-//CREATE MOVIE DISPLAY
+// CREATE MOVIE DISPLAY
 
 function movieDisplay(movies) {
-
   movieContainer.innerHTML = '';
 
   movies.forEach(movie => {
@@ -9,14 +8,12 @@ function movieDisplay(movies) {
     movieContainer.innerHTML += `
       <div class="movie">
         <div>
-        <img src="${poster}" alt="${movie.Title}">
-        <h3>${movie.Title}</h3>
-        <p>${movie.Year}</p>
+          <img src="${poster}" alt="${movie.Title}">
+          <h3>${movie.Title}</h3>
+          <p>${movie.Year}</p>
         </div>
         <div>Add Favorite</div>
       </div>
     `;
   });
 }
-fetchMovies('batman')
-movieDisplay(currentResults);
