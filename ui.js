@@ -1,28 +1,4 @@
-//CREATE MOVIE DISPLAY
 
-/*function movieDisplay(movies) {
-
-  movieContainer.innerHTML = '';
-
-  movies.forEach(movie => {
-    const poster = movie.Poster !== 'N/A' ? movie.Poster : 'placeholder.jpg';
-    movieContainer.innerHTML += `
-      <div class="movie">
-        <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:scale-105 duration-300 cursor-pointer"
-        >
-        <img src="${poster}" alt="${movie.Title}" class = "w-full h-[430px] object-cover text-blue-200">
-        <h3 class = "text-l font-bold text-blue-200">${movie.Title}</h3>
-        <p class = "text-gray-400 mt-2 text-red-300">${movie.Year}</p>
-        </div>
-        <div class = "text-xl font-bold text-pink-500">Add Favorite</div>
-      </div>
-    `;
-  });
-}
-fetchMovies('Rambo')
-movieDisplay(currentResults);
-*/
-function movieDisplay(movies) {
 
     movieContainer.innerHTML = "";
 
