@@ -24,4 +24,4 @@ async function fetchMovies(title, page = 1) {
     console.error('Error fetching movies:', error);
   }
 }
-fetchMovies('battle', 1);
+fetchMovies('Rambo');

@@ -1,55 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>movie finder</title>
-   <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Movie Finder</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html{
+scroll-behavior:smooth;
+}
+
+body::-webkit-scrollbar{
+width:10px;
+}
+
+body::-webkit-scrollbar-thumb{
+background:#ef4444;
+border-radius:20px;
+}
+
+body{
+background:#020617;
+}
+</style>
+
 </head>
-<body>
-  <header>
-    <h1>Movie Finder</h1>
-    <p>Find Favorite movies!</p>
-  </header>
-  <main>
-    <!-- Search -->
-    <form action="" method="GET" id="searchForm">
-      <label for="searchInput">Enter a movie title:</label>
-      <input type="text" id="searchInput" name="movie" placeholder="Search for a movie..." required>
 
-      <button type="submit" id="searchButton">Search</button> 
-    </form>
+<body class="text-white">
 
-    <div id="status"></div> 
-    
-    <!-- Favorite Movies -->
-    <h2>Favorite Movies</h2>
-    <div id="favoriteContainer"></div>
-    
-    <!-- Movie Results -->
-    <h2>Movie Details</h2>
-    <div id="movieContainer"></div>
+<div class="fixed inset-0 -z-10 overflow-hidden">
 
-    <div id="paginationContainer"></div>
+<div class="absolute -top-44 -left-40 h-96 w-96 rounded-full bg-red-500/20 blur-3xl"></div>
 
-    <!-- Modal -->
-    <div id="movieModal" class="modal">
-      <div id="modalContent" class="modal-content" role="dialog" >
-        <button id="closeModal">Close</button>
+<div class="absolute bottom-0 right-0 h-[450px] w-[450px] rounded-full bg-blue-500/20 blur-3xl"></div>
+
+</div>
+
+<header class="sticky top-0 backdrop-blur-lg bg-slate-950/80 border-b border-slate-800 z-50">
+
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
+
+<h1 class="text-3xl font-black tracking-wider">
+
+ Movie Finder
+
+</h1>
+
+<p class="text-gray-400 hidden md:block">
+
+Discover your next favourite movie
+
+</p>
+
+</div>
+
+</header>
+
+<section class="max-w-7xl mx-auto text-center py-20 px-5">
+
+<h2 class="text-5xl font-black">
+
+Discover Amazing Movies
+
+</h2>
+
+<p class="text-gray-400 mt-5 text-lg">
+
+Search thousands of movies instantly.
+
+</p>
+
+<form
+id="searchForm"
+class="mt-10 flex justify-center">
+
+<div class="relative w-full max-w-2xl">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Search movies..."
+
+class="w-full rounded-full bg-slate-900 border border-slate-700 px-7 py-5 text-lg outline-none focus:ring-2 focus:ring-red-500"/>
+
+<button
+
+type="submit"
+
+class="absolute right-2 top-2 bg-red-500 hover:bg-red-600 px-6 py-3 rounded-full duration-300">
+
+Search
+
+</button>
+
+</div>
+
+</form>
+
+<div class="mt-5 text-gray-400">
+
+Popular:
+Batman • Avengers • beauty and black • Avatar
+
+</div>
+
+</section>
+
+<main class="max-w-7xl mx-auto px-5">
+
+<div id="status" class="mb-8"></div>
+
+<section class="mb-16">
+
+<h2 class="text-3xl font-bold mb-8">
+
+❤️ Favourite Movies
+
+</h2>
+
+<div
+id="favoriteContainer"
+class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="text-3xl font-bold mb-2">
+
+  Movie Results
+
+</h2>
+
+<p
+id="resultCount"
+class="text-gray-400 mb-8">
+
+Search for a movie...
+
+</p>
+
+<div
+
+id="movieContainer"
+
+class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+
+</div>
+
+<div
+
+id="paginationContainer"
+
+class="flex justify-center mt-10">
+
+</div>
+
+</section>
+<!-- Modal -->
+    <div id="movieModal" class="modal" aria-hidden="true">
+      <div id="modalContent" class="modal-content" role="dialog" aria-modal="true">
+        <button id="closeModal" aria-label="Close modal">Close</button>
         <div id="modalBody"></div>
       </div>
     </div>
 
   </main>
 
-  <footer>  
-    <p>&copy; 2026 Movie Finder Group 7 IOTBTECH</p>
-  </footer>
+</main>
 
- <script src="api.js"></script> 
- <script src="ui.js"></script>
- <script src="modal.js"></script>
- <script src="favorites.js"></script>
- <script src="script.js"></script>
+<footer class="mt-20 border-t border-slate-800 py-10 text-center text-gray-400">
+
+<p>&copy; 2026 Movie Finder Group 7 IOTBTECH</p>
+
+
+</footer>
+
+<script src="api.js"></script>
+<script src="ui.js"></script>
+<script src="modal.js"></script>
+<script src="favorites.js"></script>
+<script src="script.js"></script>
+
 </body>
-</html>   
+</html>
