@@ -1,10 +1,7 @@
-//SEARCH FUNCTION AND API CALL
-
-const API_KEY = 'd8fcbd28'; 
-const statusDiv = document.getElementById('status');
+// SEARCH FUNCTION AND API CALL
 
 async function fetchMovies(title, page = 1) {
-  const url = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(title)}&page=${page}`;
+  const url = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(title)}&page=${page}`;
   currentTitle = title;
   currentPage = page;
   try {
